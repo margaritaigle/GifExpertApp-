@@ -13,8 +13,8 @@ describe('Testing GifGrid', () => {
         });
 
         render(<GifGrid category={ category }/>);
-        expect(screen.getByText('Loading...'));
-        expect(screen.getByText(category));
+        expect(screen.getByText('Loading...')).toBeTruthy();
+        expect(screen.getByText(category)).toBeTruthy();
      });
 
     test('should show the items when the images useFetchGifs are loaded', () => {
